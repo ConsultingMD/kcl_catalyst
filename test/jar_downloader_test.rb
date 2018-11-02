@@ -17,7 +17,6 @@ class JarDownloaderTest < Minitest::Test
 
   def test_constructs_a_proper_url
     url = downloader.maven_url_for('com.amazonaws', ['amazon-kinesis-client', '1.7.6'])
-    puts url
     assert_equal(
       'https://repo1.maven.org/maven2/com/amazonaws/'\
       'amazon-kinesis-client/1.7.6/amazon-kinesis-client-1.7.6.jar',
