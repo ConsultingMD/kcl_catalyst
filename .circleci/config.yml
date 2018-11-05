@@ -29,7 +29,7 @@ jobs:
           command: bundle exec rake
 
       - store_test_results:
-          path: /tmp/test-results
+          path: /home/circleci/repo/test/reports
       - store_artifacts:
-          path: /tmp/test-results
+          path: /home/circleci/repo/test/reports
           destination: test-results
