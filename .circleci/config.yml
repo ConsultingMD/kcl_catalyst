@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.3
-      - environment:
-        MINITEST_REPORTERS: JUnitReporter
+        environment:
+          MINITEST_REPORTERS: JUnitReporter
 
     working_directory: ~/repo
 
