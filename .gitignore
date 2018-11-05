@@ -50,4 +50,4 @@ build-iPhoneSimulator/
 .rvmrc
 
 # do not check in the downloaded jar files
-/lib/jars
+/lib/jars/*.jar
