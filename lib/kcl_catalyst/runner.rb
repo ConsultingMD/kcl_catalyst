@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 module KclCatalyst
   class Runner
     attr_accessor :properties_file
