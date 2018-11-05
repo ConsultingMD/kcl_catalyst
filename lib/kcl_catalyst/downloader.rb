@@ -34,10 +34,6 @@ module KclCatalyst
       MAVEN_LIST
     end
 
-    def jar_download_dir
-      @jar_download_dir ||= File.realpath(File.join __FILE__, '..', '..', 'jars')
-    end
-
     def go
       maven_list.each do |group_id, artifacts|
         artifacts.each do |artifact|
@@ -48,7 +44,7 @@ module KclCatalyst
     end
 
     def get url, file_name:
-      File.open("#{jar_download_dir}/#{file_name}", "wb+") do |jar_file|
+      File.open("#{KclCatalyst::JAR_DOWNLOAD_DIR}/#{file_name}", "wb+") do |jar_file|
         open(url, "rb") do |remote_data|
           jar_file.write remote_data.read
         end

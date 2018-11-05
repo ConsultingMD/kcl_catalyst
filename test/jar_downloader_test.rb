@@ -11,10 +11,6 @@ class JarDownloaderTest < Minitest::Test
     refute downloader.maven_list.empty?
   end
 
-  def test_has_a_download_directory
-    refute downloader.jar_download_dir.empty?
-  end
-
   def test_constructs_a_proper_url
     url = downloader.maven_url_for('com.amazonaws', ['amazon-kinesis-client', '1.7.6'])
     assert_equal(
